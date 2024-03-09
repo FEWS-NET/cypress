@@ -881,7 +881,7 @@ export default (Commands, Cypress, cy, state, config) => {
             try {
               // when using the visit the document referrer should be set to an empty string
               Object.defineProperty(contentWindow.document, 'referrer', {
-                value: '',
+                value: config('baseUrl'),
                 enumerable: true,
                 configurable: true,
               })
